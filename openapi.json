@@ -1,0 +1,125 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ENSIM Chatbot API",
+    "description": "API for Telegram bot with multiple functions.",
+    "contact": {
+      "name": "ENSIM",
+      "url": "https://ensim.univ-lemans.fr",
+      "email": "Andrei.Amburtsev.Etu@univ-lemans.fr"
+    },
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "localhost:9090",
+      "description": "Local usage"
+    }
+  ],
+  "paths": {
+    "/message": {
+      "post": {
+        "description": "Sends the user's text message from ENSIM bot to indicated Telegram's chat id ",
+        "responses": {
+          "200": {
+            "description": "Message description",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "ApiResponseTelegram"
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "chat_id",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "Integer or String"
+          }
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "reply_to_message_id",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "String"
+          }
+        },
+        {
+          "name": "parse_mode",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "String"
+          }
+        }
+      ]
+    },
+    "/weather": {
+      "get": {
+        "description": "Returns forecast up to 5 days for specified city",
+        "responses": {
+          "200": {
+            "description": "Arrays of days' weather description",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "Arrays of CutWeather (main, description, temp, dt_txt)",
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "city",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "String"
+            }
+          },
+          {
+            "name": "days",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "Integer"
+            }
+          }
+        ]
+      }
+    },
+    "/joke": {
+      "get": {
+        "description": "Returns joke",
+        "responses": {
+          "200": {
+            "description": "Resends joke",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "Joke (id, title, text, score)"
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

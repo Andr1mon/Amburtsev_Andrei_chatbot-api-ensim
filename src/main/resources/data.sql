@@ -1,0 +1,10 @@
+INSERT INTO joke (id, title, text, score) VALUES (1, 'Pêcheurs', 'Pourquoi les pêcheurs ne sont pas gros ? Parce qu’ils surveillent leur ligne.', '8');
+INSERT INTO joke (id, title, text, score) VALUES (2, 'Steak', 'Qu’est ce qui n’est pas un steak ? Une pastèque.', '1');
+INSERT INTO joke (id, title, text, score) VALUES (3, 'Eléphant', 'Que prend un éléphant dans un bar ? Beaucoup de place.', '6');
+INSERT INTO joke (id, title, text, score) VALUES (4, 'Mickey', 'Pourquoi Mickey Mouse ? Parce que Mario Bros.', '0');
+INSERT INTO joke (id, title, text, score) VALUES (5, 'Lavab', 'Qu’est-ce qu’un lavab ? Un lavabo sans o.', '10');
+INSERT INTO joke (id, title, text, score) VALUES (6, 'Dinosaure', 'Que raconte une maman dinosaure à son bébé dinosaure ? Une préhistoire.', '9');
+INSERT INTO joke (id, title, text, score) VALUES (7, 'Medecin', 'Un homme demande à son médecin : « – Docteur, il me reste combien de temps à vivre ? – 10. – 10 ans ? – 9, 8, 7… »', '0');
+INSERT INTO joke (id, title, text, score) VALUES (8, 'Construction', 'Tu veux entendre une blague de construction? Laisse faire… je travaille toujours dessus.', '3');
+INSERT INTO joke (id, title, text, score) VALUES (9, 'Fantômes', 'Pourquoi les fantômes sont-ils de si mauvais menteurs? Parce qu’on peut lire à travers.', '4');
+INSERT INTO joke (id, title, text, score) VALUES (10, 'Horloge', 'Si une horloge sonne 13 fois, quelle heure est-il? Il est l’heure d’acheter une nouvelle horloge!', '2');
